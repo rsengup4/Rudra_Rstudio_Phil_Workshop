@@ -8,9 +8,9 @@ Here I import data
 
 ```{r}
 library(haven)
-cola <- read_sas("http://www.principlesofeconometrics.com/sas/cola.sas7bdat", 
+airline <- read_sas("http://www.principlesofeconometrics.com/sas/airline.sas7bdat", 
     NULL)
-cola
+airline
 ```
 
 Data Wrangle
