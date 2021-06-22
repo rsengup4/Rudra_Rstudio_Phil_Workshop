@@ -1,0 +1,33 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Import Proc
+Here I import data
+
+```{r}
+library(haven)
+cola <- read_sas("http://www.principlesofeconometrics.com/sas/cola.sas7bdat", 
+    NULL)
+cola
+```
+
+Data Wrangle
+Cleaning my data here
+
+Data Viz
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+airline %>%
+ filter(Y >= 7.6 & Y <= 18.2) %>%
+ filter(W >= 0.42 & W <= 1.42) %>%
+ ggplot() +
+ aes(x = W, y = Y, fill = L, colour = YEAR, size = K) +
+ geom_point() +
+ theme_minimal()
+```
+
